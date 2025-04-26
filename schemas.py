@@ -129,11 +129,11 @@ class OrderRequest(BaseModel):
         orm_mode = True
         arbitrary_types_allowed = True
 
-class EmailRequest(BaseModel):
-    email: EmailStr
+# class EmailRequest(BaseModel):
+#     email: EmailStr
 
 
 # Request Model for Verifying OTP
-class VerifyRequest(BaseModel):
-    email: EmailStr
-    otp: str
+# class VerifyRequest(BaseModel):
+#     email: EmailStr
+#     otp: str
