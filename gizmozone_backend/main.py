@@ -38,7 +38,11 @@ def connection():
 
 @app.get("/")
 def read_root():
- return {"message": "Hello, FastAPI!"}
+    return {
+        "message": "Hello, FastAPI!",
+        "signup_endpoint": "/user_signup",  # This is your POST endpoint
+        "note": "This endpoint accepts POST requests with user signup details in JSON format."
+    }
 
 @app.post("/user_signup")
 def user_signup(signup_details:schemas.UserSignUp):
